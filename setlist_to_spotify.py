@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-import sys
 import spotipy
 import spotipy.util as util
 
@@ -63,7 +62,6 @@ for song in search_data:
     if track_id['tracks']['items'] == []:
         continue
     track_id = track_id['tracks']['items'][0]['id']
-    # print(track_id)
     track_ids.append(track_id)
 
 
